@@ -1,38 +1,15 @@
-alert("Merhaba!");
-
-document.getElementById("btn").addEventListener("click", () => {
-    
-document.getElementById("sonra").textContent = "butona tıkladın.";
-});
-
-let sayi = 5;
-sayi = sayi + 10;
-
-const ad = "Eren";
-
-console.log("Toplam", sayi);
-console.log("İsim:", ad);
-
-if (5>3) {
-    console.log("5 3'ten büyük babacum");
-}
-
-let yas = 17;
-
-if (yas>=18) {
-    console.log("Girebilirsin")
-} else {
-    console.log("18 ol gel >.<");
-}
-
+const input = document.getElementById("input");
 const btn = document.getElementById("btn");
+const mesaj_kutu = document.getElementById("mesaj_kutu");
 
 btn.addEventListener("click", () => {
-    alert("Butona tıkladın!");
-})
+  const yazi = input.value.trim();
+  if (yazi === "") return;
 
-const p =
-document.getElementById("sonuc");
-p.textContent = "Js ile yazıldı";
+  const yeniMesaj = document.createElement("div");
+  yeniMesaj.className = "mesaj";
+  yeniMesaj.textContent = yazi;
 
-document.getElementById("btn").addEventListener("click", () => { document.getElementById("sonra").textContent = "butona tıladın2";});
+  mesaj_kutu.appendChild(yeniMesaj);
+  input.value = "";
+});
