@@ -1,15 +1,10 @@
-const input = document.getElementById("input");
-const btn = document.getElementById("btn");
-const mesaj_kutu = document.getElementById("mesaj_kutu");
+let a = 5;
+let b = 3;
 
-btn.addEventListener("click", () => {
-  const yazi = input.value.trim();
-  if (yazi === "") return;
+console.log(a + b);
 
-  const yeniMesaj = document.createElement("div");
-  yeniMesaj.className = "mesaj";
-  yeniMesaj.textContent = yazi;
-
-  mesaj_kutu.appendChild(yeniMesaj);
-  input.value = "";
-});
+if (a > b) {
+    console.log("a büyük");
+} else {
+    console.log("B büyük");
+}
