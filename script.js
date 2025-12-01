@@ -1,19 +1,6 @@
-let a = 5;
-let b = 3;
+const button = document.getElementById("buton1");
+const p = document.getElementById("Deneme");
 
-console.log(a + b);
-
-if (a > b) {
-    console.log("a büyük");
-} else {
-    console.log("B büyük");
-}
-
-function selamla() 
-{
-  console.log("Merhaba!");
-}
-selamla(); // çağırınca çalışır
-
-const button = document.getElementById('btn');
-button.textContent = "Basma Beni!";
+button.addEventListener('click', () => {
+    p.textContent("DEĞİŞTİM!");    
+})
